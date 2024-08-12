@@ -18,7 +18,8 @@ public class ComparatorJava8ExampleThirdWay {
 	//	Function<Bank, Integer> f=bank->bank.getId();
 		
 	//	Comparator<Bank> comparator=Comparator.comparing(f);
-		Comparator<Bank> comparator=Comparator.comparing(bank->bank.getId());
+	//	Comparator<Bank> comparator=Comparator.comparing(bank->bank.getId());
+		Comparator<Bank> comparator=Comparator.comparing(Bank::getCustomerName);
 		Collections.sort(list, comparator);
 		list.forEach(System.out::println);
 
